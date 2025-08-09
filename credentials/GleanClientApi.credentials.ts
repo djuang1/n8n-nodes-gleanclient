@@ -9,11 +9,18 @@ export class GleanClientApi implements ICredentialType {
 		'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
 	properties: INodeProperties[] = [
 		{
+			displayName: 'Base URL',
+			name: 'baseUrl',
+			type: 'string',
+			default: 'https://support-lab-be.glean.com',
+		},
+		{
 			displayName: 'API Key',
 			name: 'apiKey',
 			type: 'string',
+			typeOptions: { password: true },
 			default: '',
-		},
+		}
 	];
 	authenticate: IAuthenticateGeneric = {
 		type: 'generic',

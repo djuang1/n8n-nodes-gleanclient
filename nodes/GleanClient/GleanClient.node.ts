@@ -8,7 +8,7 @@ export class GleanClient implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Retrieve results from the Glean index for the given query and filters.',
+		description: 'Retrieve results from the Glean index for the given query and filters',
 		defaults: {
 			name: 'Glean Client',
 		},
@@ -16,18 +16,12 @@ export class GleanClient implements INodeType {
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				displayName: 'Glean API key connection',
 				name: 'GleanClientApi',
 				required: true,
-				displayOptions: {
-					show: {
-						authentication: ['GleanClientApi'],
-					},
-				},
 			},
 		],
 		requestDefaults: {
-			baseURL: 'https://={{$value.gleanInstance}}-be.glean.com',
+			baseURL: '={{ $credentials.baseUrl.replace(new RegExp("/$"), "") }}',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
@@ -71,19 +65,12 @@ export class GleanClient implements INodeType {
 									query: '={{$value.query}}',
 									trackingToken: '1',
 									pageSize: 10,
-								},
+								}
 							},
 						},
 					},
 				],
 				default: 'post',
-			},
-			{
-				displayName: 'Instance',
-				name: 'gleanInstance',
-				type: 'string',
-				default: '',
-				placeholder: 'support-lab',
 			},
 			{
 				displayName: 'Query',
