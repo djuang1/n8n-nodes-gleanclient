@@ -16,7 +16,7 @@ export class GleanClient implements INodeType {
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'GleanClientApi',
+				name: 'gleanClientApi',
 				required: true,
 			},
 		],
@@ -55,7 +55,7 @@ export class GleanClient implements INodeType {
 					{
 						name: 'Search Glean',
 						value: 'post',
-						action: 'Search Glean',
+						action: 'Search glean',
 						description: 'Retrieve results from the index for the given query',
 						routing: {
 							request: {
