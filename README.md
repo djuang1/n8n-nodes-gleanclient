@@ -36,6 +36,7 @@ Tested locally against n8n 1.105.4
 
 ## Version history
 
-August 8, 2025 - 0.1.2 
+August 8, 2025 - 0.1.2 - First.
+August 8, 2025 - 0.1.3 - Fixed AI Agent tool usage.
 
 
