@@ -12,6 +12,7 @@ export class GleanClient implements INodeType {
 		defaults: {
 			name: 'Glean Client',
 		},
+		usableAsTool: true,
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		credentials: [
