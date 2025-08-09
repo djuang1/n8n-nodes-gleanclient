@@ -63,7 +63,7 @@ export class GleanClient implements INodeType {
 								method: 'POST',
 								url: '/rest/api/v1/search',
 								body: {
-									query: '={{$value.query}}',
+									query: '={{$parameter["query"]}}',
 									trackingToken: '1',
 									pageSize: 10,
 								}
