@@ -1,4 +1,4 @@
-import { IAuthenticateGeneric, ICredentialType, INodeProperties } from 'n8n-workflow';
+import { IAuthenticateGeneric, ICredentialType, INodeProperties,ICredentialTestRequest } from 'n8n-workflow';
 
 export class GleanClientApi implements ICredentialType {
 	name = 'gleanClientApi';
@@ -28,6 +28,14 @@ export class GleanClientApi implements ICredentialType {
 			headers: {
 				Authorization: '=Bearer {{$credentials.apiKey}}',
 			},
+		},
+	};
+
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://app.glean.com',
+			url: '/',
+			method: 'GET',
 		},
 	};
 }

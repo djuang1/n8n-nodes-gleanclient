@@ -2,7 +2,7 @@ import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflo
 
 export class GleanClient implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Glean Client',
+		displayName: 'Glean',
 		name: 'gleanClient',
 		icon: 'file:glean.svg',
 		group: ['transform'],
@@ -10,7 +10,7 @@ export class GleanClient implements INodeType {
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Retrieve results from the Glean index for the given query and filters',
 		defaults: {
-			name: 'Glean Client',
+			name: 'Glean',
 		},
 		usableAsTool: true,
 		inputs: [NodeConnectionType.Main],
@@ -56,7 +56,7 @@ export class GleanClient implements INodeType {
 					{
 						name: 'Search Glean',
 						value: 'post',
-						action: 'Search glean',
+						action: 'Search',
 						description: 'Retrieve results from the index for the given query',
 						routing: {
 							request: {
