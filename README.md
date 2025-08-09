@@ -8,11 +8,10 @@ The Glean Work AI platform lets you embed enterprise search, chat, and agent cap
 
 [Installation](#installation)  
 [Operations](#operations)  
-[Credentials](#credentials)  <!-- delete if no auth needed -->  
+[Credentials](#credentials)
 [Compatibility](#compatibility)  
-[Usage](#usage)  <!-- delete if not using this section -->  
 [Resources](#resources)  
-[Version history](#version-history)  <!-- delete if not using this section -->  
+[Version history](#version-history)
 
 ## Installation
 
